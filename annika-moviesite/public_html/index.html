@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Annika saw Once upon a Time in Hollywood twice in theatres!!</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/1f90701e4d.js" crossorigin="anonymous"></script>
+    
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  .toggler { width: 500px; height: 200px; }
+  #button { padding: .5em 1em; text-decoration: none; }
+  #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
+  #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    // run the currently selected effect
+    function runEffect() {
+      // get effect type from
+      var selectedEffect = $( "#effectTypes" ).val();
+ 
+      // Most effect types need no options passed by default
+      var options = {};
+      // some effects have required parameters
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 280, height: 185 } };
+      }
+ 
+      // Run the effect
+      $( "#effect" ).show( selectedEffect, options, 500, callback );
+    };
+ 
+    //callback function to bring a hidden box back
+    function callback() {
+      setTimeout(function() {
+        $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+    });
+ 
+    $( "#effect" ).hide();
+  } );
+  </script>
+    
+</head>
+<body>
+  <header>
+
+    <img src="img/title.png" alt="Once Upon a Time in HollyWood" class="logo">
+
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#facts">Facts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+</header>
+<div class="container group">
+    <img src="img/porsche-normal-ps.png" alt="porsche" class="car">
+    <div> 
+        <audio src="media/Apache.mp3" controls></audio></div>
+  <div>
+    <h1 id="about">Once Upon A time in Hollywood</h1>
+    <p>A film by Quentin Tarantino showcasing the ins and outs of Hollywood at the end of the 1960's</p>
+    <img src="img/poster.jpg"  alt="Once upon a time in Hollywood movie poster" class="imgposter">
+
+  </div>
+  <div class="cast" id="cast">
+    <h2>The cast</h2>
+    <ul>
+      <li>Leonardo DiCaprio as <em>Rick Dalton</em></li>
+      <li>Brad Pitt as <em>Cliff Booth</em></li>
+      <li>Margot Robbie as <em>Sharon Tate</em></li>
+      <li>Emile Hirsch as <em>Jay Sebring</em></li>
+      <li>Margaret Qualley as <em>Pussycat</em></li>
+    </ul>
+    <img src="img/sharontateheader.webp" alt="margot as sharon tate standing in front of theatre" class="castphoto">
+   <img src="img/boysonyellow.png" alt="leo and brad" class="castphoto">
+  </div>
+  <div class="facts" id="facts">
+    <h2>Facts</h2> 
+    <p>1969 Los Angeles was made with practical effects</p>
+    <p>Leo aimed a real falmethrower at people on set</p>
+    <p> Debra Tate, Sharon Tate's sister, was brought to tears over Margot Robbie's portrayal</p>
+      <p> The owner of the car used the night of the Manson murders offered it to Tarantino to use for the film, but he (understandably) declined</p>
+    <h3>Learn about the characters' cars!<i class="fa-solid fa-car-side fa-pull-right"></i></h3>
+      <table>
+  <tr>
+    <th>Character</th>
+    <th>Car</th>
+  </tr>
+  <tr>
+    <td>Rick Dalton</td> 
+      <td>1966 Cadillac Coupe DeVille</td>
+   
+  </tr>
+  <tr>
+    <td>Cliff Booth</td>
+    <td>1964 Volkswagen Karmann Ghia</td>
+  </tr>
+            <tr>
+    <td>Sharon Tate</td>
+    <td>1969 Porsche 911</td>
+  </tr>
+ <tr>
+    <td>Roman Polanski</td>
+    <td>1950-1953 MG TD</td>
+  </tr>
+    <tr>
+    <td>The Manson Family</td>
+    <td>1959 Ford Galaxie sedan</td>
+  </tr>
+
+</table>
+
+<iframe src="https://www.tunnelram.net/news-blog/2019/8/26/the-cars-of-tarantinos-once-upon-a-time-in-hollywood" width="500" title="The Cars of Tarantino’s Once Upon a Time in Hollywood" class="carsite"></iframe>
+      
+    <img src="img/margotdancing.webp" alt="Margot as Sharon tate dancing at a party outside" class="castphoto">
+  </div>
+
+  <div id="contact">
+    <!--horaay! -->
+    <p><a href="#">Enter your email to join my newsletter</a></p>
+    <form action=""method="post">
+     <label>Email:</label> 
+      <input id="post-email" type="email" name="email">
+        <input type="submit" value="submit">
+      
+      </form>
+
+  </div>
+
+  <div class="changer " >
+   <h2>Change the background color:<span class="color"></span>
+    
+      </h2>   
+      <button class="btn btn-hero" id="btn">Click me</button>
+      </div> 
+    
+ 
+<div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Movie Time</h3>
+     <img src="img/Cute%20Cat%20Watching%20Movie%20With%20Popcorn.png">
+  </div>
+</div>
+ 
+<select name="effects" id="effectTypes">
+  <option value="blind">Blind</option>
+  <option value="bounce">Bounce</option>
+  <option value="clip">Clip</option>
+  <option value="drop">Drop</option>
+  <option value="explode">Explode</option>
+  <option value="fade">Fade</option>
+  <option value="fold">Fold</option>
+  <option value="highlight">Highlight</option>
+  <option value="puff">Puff</option>
+  <option value="pulsate">Pulsate</option>
+  <option value="scale">Scale</option>
+  <option value="shake">Shake</option>
+  <option value="size">Size</option>
+  <option value="slide">Slide</option>
+</select>
+ 
+<button id="button" class="ui-state-default ui-corner-all">See what you will look like at the theatre</button>
+ 
+ 
+
+</div>
+
+<script src="js/hex.js"></script>
+  <footer>
+    <img src="img/title.png" alt="Once Upon a Time in HollyWood" class="logo">
+    <p>Copyright 2023 Sony</p>
+    <p>call for tickets 123456789  <i class="fa-solid fa-phone"></i> </p>
+  </footer>
+
+</body>
+</html>
